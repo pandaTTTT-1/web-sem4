@@ -397,6 +397,7 @@
 	display: flex;
 	gap: 2rem;
 	list-style: none;
+	margin-top: 5rem;
 	align-items: center;
  }
  .meta-label{
@@ -433,4 +434,7 @@
 .meta .meta-title{
 	display: inline;
 	margin-right: 1rem;
+}
+.story{
+	padding: 2.5rem;
 }
