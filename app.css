@@ -1,7 +1,7 @@
 :root {
     --main-color: #c0392b;
-    --body-bg: #181616;
-    --box-bg: #221f1f;
+    --body-bg: #18161600;
+    --box-bg: #221f1f00;
     --text-color: #ffffff;
 
     --nav-height: 60px;
@@ -50,7 +50,8 @@ img {
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.42);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.392) 0%, rgba(255,255,255,0) 82%);
 }
 
 .nav-wrapper {
@@ -59,7 +60,7 @@ img {
     left: 0;
     width: 100%;
     z-index: 99;
-    background-color: #000000;
+    background-color: #00000064;
 }
 
 .nav {
@@ -201,6 +202,7 @@ a.movie-item:hover {
     padding-top: 40%;
     position: relative;
     overflow: hidden;
+    height: 100vh;
 }
 
 .hero-slide-item img {
@@ -604,4 +606,7 @@ footer .content {
     .nav-menu.active {
         left: 0;
     }
+}
+.hero-section{
+    transform: translateY(-65px);
 }
