@@ -60,7 +60,7 @@ img {
     left: 0;
     width: 100%;
     z-index: 99;
-    background-color: #00000064;
+    background-color: #00000000;
 }
 
 .nav {
@@ -349,6 +349,9 @@ a.movie-item:hover {
     transform: translateY(0);
     visibility: visible;
     opacity: 1;
+}
+.owl-stage{
+    transition: all 0.25s ease 0s !important;
 }
 
 .movie-item {

@@ -1,14 +1,17 @@
 @import url("https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,400i|IBM+Plex+Sans+Condensed:400,400i|IBM+Plex+Sans:100,100i,400,400i,700,700i|IBM+Plex+Serif:400,400i");
-#background-video{
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    z-index: -2;
+.backgroundd{
+   
+}
+.backgroundd img{
+	width: 100%;
+	top: -20%;
+	object-fit: cover;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: -2;
 }
  .about {
 	 position: fixed;
@@ -186,19 +189,22 @@
 	 font-family: "IBM Plex Sans", sans-serif;
 	 overflow: hidden;
 	 transition: 0.3s ease;
+	 -webkit-mask-image: linear-gradient(90deg, rgb(255 255 255) 30%, rgba(255, 255, 255, 0.294) 100%);
+  mask-image: linear-gradient(black, transparent);
 }
 
  .tablinks:before {
 	/* Gradient */
-	 background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+	 
 	 content: "";
 	 width: 100%;
-	 height: 0px;
+	 height: 100%;
 	 position: absolute;
 	 top: 0;
 	 left: 0;
 	 transition: 0.3s ease-in-out;
-	 z-index: 2;
+	 z-index: 99;
+	 opacity: .5;
 }
 /*tab buttons hover*/
  .tablinks:hover::before {
@@ -210,32 +216,32 @@
 /* Tab active */
  .tablinks.active {
     background-color: #46005c1c;
-	 z-index: 0;
+	 z-index: 5;
 	 border-right: 0px;
 	 border-left: 0px;
 	 
 	 bottom: 0px;
 	 overflow: hidden;
+	 -webkit-mask-image:none;
+  mask-image: none;
 }
- @media screen and (max-width: 512px) {
-	 .tablinks.active {
-		 height: 60px;
-	}
-}
+ 
  .tablinks.active:before {
 	/* Gradient */
-	 content: "";
-	 width: 100%;
-	 height: 5px;
-	 top: 0;
-	 left: 0;
+	content: "";
+    width: 5px;
+    height: 100%;
+    top: 0px;
+    left: 97%;
+    background-color: rgb(255 255 255);
 }
 /* Tabs text */
  .tablinks.active p, .tablinks.active:hover p {
 	 opacity: 1;
-	 background: -webkit-linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-	 -webkit-background-clip: text;
-	 -webkit-text-fill-color: transparent;
+	 background: -webkit-linear-gradient(0deg, rgb(72 89 162) 0%, rgb(90 57 123 / 28%) 100%);
+	 padding: 10px 84px;
+	 -webkit-text-fill-color: white;
+	
 }
  .tablinks p {
 	 opacity: 0.6;
@@ -249,6 +255,7 @@
 	 color: #ffffff;
 	 backface-visibility: hidden;
 	 font-weight: 400;
+	 font-size: 18px;
 }
  .tablinks:hover p {
 	 color: white;
@@ -289,20 +296,24 @@
 }
 /* tab content */
  .wrapper_tabcontent {
-	 background-color: rgba(0, 0, 0, 0.315);
-	 margin-top: 0px;
-	 z-index: 0;
-	 position: relative;
-	 opacity: 1;
-	 padding: 40px 60px;
-	 overflow: hidden;
-	 transition: all 1s ease;
-	 top: 0;
-     color: white;
+	
+    margin-top: 0px;
+    z-index: 0;
+    position: relative;
+    opacity: 1;
+    padding: 180px 90px;
+    overflow: hidden;
+    transition: all 1s ease;
+    top: -60px;
+    color: white;
+    height: max-content;
+	display: flex;
 }
+
  .tabcontent {
 	 display: none;
 	 min-height: 180px;
+	 
 }
  @keyframes tabEffect {
 	 from {
@@ -330,19 +341,15 @@
 }
 /* Title */
  .tabcontent h3 {
-	 font-size: 40px;
-	 top: 75px;
-	 transform: rotate(90deg);
-	 position: absolute;
-	 left: -90px;
-	 opacity: 0.5;
-	 width: 200px;
-	 height: 60px;
-	 background: -webkit-linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-	 -webkit-background-clip: text;
-	
-	 padding: 0;
-	 animation: city 1s ease;
+	font-size: 60px;
+    top: 100px;
+    position: absolute;
+    left: 90px;
+    height: 60px;
+    color: white;
+    z-index: 99;
+    padding-bottom: 1rem;
+    animation: city 1s ease;
 }
  @media screen and (max-width: 512px) {
 	 .tabcontent h3 {
@@ -354,21 +361,23 @@
 		 left: -150px;
 	}
 	 to {
-		 left: -90px;
+		 left: 90px;
 	}
 }
 /* Text*/
  .tabcontent p {
 	 
-	 margin: 0;
-	 padding: 0;
-	 line-height: 28px;
-	 font-weight: 100;
-	 transition: all 1s ease;
-	 animation: fadeEffect 0.6s ease;
-	 width: 100%;
-	 font-size: 16px;
-	 font-family: "IBM Plex Sans", sans-serif;
+	margin: 2rem 0;
+    padding: 0;
+    line-height: 28px;
+    font-weight: 400;
+    transition: all 1s ease;
+    animation: fadeEffect 0.6s ease;
+    width: 55%;
+    font-size: 16px;
+    font-family: "IBM Plex Sans", sans-serif;
+    z-index: 99;
+    position: relative;
 }
  @media screen and (max-width: 512px) {
 	 .tabcontent p {
@@ -387,3 +396,33 @@
 	}
 }
  
+.image-character{
+	position: absolute;
+    width: 90%;
+    top: 9rem;
+    right: -17rem;
+	animation:fadecha .5s ;
+}
+@keyframes fadecha {
+	from {
+		opacity: 0;
+		top: -2rem;
+   }
+	to {
+		opacity: 1;
+		top: 9rem;
+   }
+}
+.vid > *{
+	width: 100%;
+	margin-top: 2rem;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.42);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.703) 0%, rgba(255,255,255,0) 82%);
+}

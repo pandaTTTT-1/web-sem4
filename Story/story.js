@@ -41,7 +41,7 @@ function openTabs(el) {
  var StoryBoardBtn= document.querySelector('.Story-board');
  
  StoryBtn.addEventListener('click',function(){
-   backgroundStory.innerHTML=' <img class="backgroundd" src="../images/poster phim.jpg" alt="">';
+   backgroundStory.innerHTML=' <img  class="backgroundd" src="../images/2d.PNG" style="width: 1960px;height: auto;" alt="">';
    scripBtn1.style.display='none';
    scripBtn2.style.display='none';
    backgroundStory.style.opacity='1';

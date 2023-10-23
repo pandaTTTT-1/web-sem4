@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,400i|IBM+Plex+Sans+Condensed:400,400i|IBM+Plex+Sans:100,100i,400,400i,700,700i|IBM+Plex+Serif:400,400i");
-#background-video{
+.background{
     width: 100vw;
     height: 100vh;
     object-fit: cover;
@@ -386,4 +386,25 @@
 		 margin-left: 0;
 	}
 }
+
+.background {
+	
+	-webkit-animation-name: move;
+	-webkit-animation-duration: 12s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-direction: up;
+	-webkit-animation-timing-function:linear;
+	
+ }
+ .background:hover{
+	-webkit-animation-play-state: paused;
+ }
+ @-webkit-keyframes move {
+	0% {
+	   transform:translateY(0);
+	}
+	100% {
+	   transform:translateY(-317%);
+	}
+ }
  

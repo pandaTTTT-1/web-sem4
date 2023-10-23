@@ -1,8 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,400i|IBM+Plex+Sans+Condensed:400,400i|IBM+Plex+Sans:100,100i,400,400i,700,700i|IBM+Plex+Serif:400,400i");
+*{
+	font-family: "Cairo", sans-serif;
+}
 .background-story{
     width: 100vw;
     height: 100vh;
-    display: flex;
+   
 	justify-content: flex-end;
     position: fixed;
     left: 0;
@@ -146,7 +149,7 @@
 /* neutral 2*/
  body {
 	 background-color: #2e2e2e;
-	 font-family: "IBM Plex Sans", sans-serif;
+	 font-family: "Cairo", sans-serif;
 	 margin: 0;
 }
  #wrapper {
@@ -182,8 +185,29 @@
 	font-size: 20px;
 	outline: none;
 	cursor: pointer;
+	position: relative;
+}
+.tablinks.active::before{
+	background-image: linear-gradient(135deg, #667eea 0%, #764ba28a 100%);
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 5px;
+	left: 0;
+	top: 100%;
+	animation: fadewidth .7s;
 }
 
+@keyframes fadewidth {
+	from {
+		opacity: 0;
+		width: 0;
+   }
+	to {
+		opacity: 1;
+		width: 100%;
+   }
+}
  
 /*tab buttons hover*/
 
@@ -197,9 +221,10 @@
 /* Tabs text */
  .tablinks.active p, .tablinks.active:hover p {
 	 opacity: 1;
-	 color: #667eea;
+	 color: #ffffff;
 	 transform: translateX(5px);
-	 text-decoration: underline;
+	
+	
 
 }
  .tablinks p {
@@ -334,14 +359,14 @@
  .tabcontent p {
 	 
 	 margin: 2rem 0;
-	 padding: 0;
+	 padding: 6rem 0;
 	 line-height: 28px;
 	 font-weight: 400;
 	 transition: all 1s ease;
 	 animation: fadeEffect 0.6s ease;
 	 width: 55%;
 	 font-size: 16px;
-	 font-family: "IBM Plex Sans", sans-serif;
+	
 	 z-index: 99;
 	 position: relative;
 }
@@ -361,4 +386,16 @@
 		 margin-left: 0;
 	}
 }
+ 
+@keyframes fadeEffectt {
+	from {
+		opacity: 0;
+		transform: translateX(-50%);
+   }
+	to {
+		opacity: 1;
+		transform: translateX(0%);
+   }
+}
+
  
